@@ -1,0 +1,10 @@
+python -m venv myenv
+myenv\Scripts\Activate
+minikube start
+minikube status
+kubectl get deployments
+kubectl apply -f deployment.yaml
+kubectl get pods
+minikube dashboard
+kubectl apply -f services.yaml
+minikube service clustering-service
