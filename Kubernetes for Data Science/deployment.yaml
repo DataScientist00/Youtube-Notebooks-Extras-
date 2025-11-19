@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment143
+  labels:
+    app: clustering-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: clustering-pod
+  template:
+    metadata:
+      labels:
+        app: clustering-pod
+    spec:
+      containers:
+      - name: clustering-container
+        image: 333131/mall_customer_clustering:latest
+        ports:
+        - containerPort: 8501
